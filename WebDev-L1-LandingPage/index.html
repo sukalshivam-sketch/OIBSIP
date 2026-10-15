@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSIS · Next-Gen Campus & Student Intelligence Platform</title>
+  <meta name="description" content="OSIS is a modern cloud operating system for educational institutions. Unify student records, attendance, course scheduling, and grading into one seamless workspace.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       1. Sticky Navigation Bar
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="OSIS Home">
+        <div class="brand-icon-box">
+          <!-- Graduation Cap / Campus SVG Icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <span>OSIS</span>
+        <span class="brand-tag">v2.5</span>
+      </a>
+
+      <!-- Pure CSS Mobile Menu Toggle Checkbox -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span class="hamburger-line"></span>
+      </label>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#about" class="nav-link">How It Works</a>
+        <a href="#stats" class="nav-link">Impact</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Contact</a>
+
+        <!-- Mobile duplicate for action buttons inside dropdown -->
+        <div class="mobile-nav-actions">
+          <a href="login.html" class="btn btn-secondary btn-sm">Sign In</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Get Started Free</a>
+        </div>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-secondary btn-sm">Sign In</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       2. Hero Section
+       ====================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      
+      <!-- Left: Headline, Subheadline & Call-to-Action -->
+      <div class="hero-content">
+        <div class="pill-badge">
+          <span>🚀</span>
+          <span>Next-Gen Campus Intelligence Platform</span>
+        </div>
+
+        <h1 class="hero-title">
+          Smart Academic Operations for the <span class="gradient-text">Modern Campus</span>
+        </h1>
+
+        <p class="hero-description">
+          Say goodbye to fragmented spreadsheets and legacy paperwork. OSIS unifies student records, automated grading, conflict-free timetable scheduling, and real-time attendance in one intuitive cloud hub.
+        </p>
+
+        <div class="hero-actions">
+          <a href="register.html" class="btn btn-primary btn-lg">
+            <span>Create Free Account</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#features" class="btn btn-secondary btn-lg">
+            <span>Explore Platform</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-social-proof">
+          <div class="avatar-group">
+            <div class="avatar avatar-1">EM</div>
+            <div class="avatar avatar-2">JD</div>
+            <div class="avatar avatar-3">AL</div>
+            <div class="avatar avatar-4">SK</div>
+          </div>
+          <div class="proof-text">
+            <div><span class="stars">★★★★★</span> <strong>4.9 / 5</strong> rating</div>
+            <div>Trusted by <strong>500+</strong> universities & colleges</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Pure CSS Dashboard UI Preview Mockup -->
+      <div class="hero-visual">
+        <div class="dashboard-card-mockup">
+          
+          <!-- Mockup Window Bar -->
+          <div class="mockup-header-bar">
+            <div class="window-dots">
+              <div class="dot dot-red"></div>
+              <div class="dot dot-yellow"></div>
+              <div class="dot dot-green"></div>
+            </div>
+            <div class="mockup-address">osis-portal.edu/dashboard/fall-2026</div>
+            <div class="mockup-badge">● Live Sync</div>
+          </div>
+
+          <!-- Mockup Workspace Content -->
+          <div class="mockup-body">
+            <div class="mockup-welcome">
+              <div>
+                <h4 class="mockup-user-title">Welcome, Dr. Mitchell</h4>
+                <p class="mockup-user-sub">Faculty of Computer Science & Engineering</p>
+              </div>
+              <span class="mockup-term-badge">Fall Semester 2026</span>
+            </div>
+
+            <!-- Mini Metrics Row -->
+            <div class="mockup-kpi-grid">
+              <div class="kpi-card">
+                <div class="kpi-label">Attendance</div>
+                <div class="kpi-val">98.4%</div>
+                <div class="kpi-diff">▲ +2.1% this week</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-label">Active Roster</div>
+                <div class="kpi-val">3,420</div>
+                <div class="kpi-diff">100% Registered</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-label">Transcripts</div>
+                <div class="kpi-val">14 Pnd</div>
+                <div class="kpi-diff">Auto-auditing</div>
+              </div>
+            </div>
+
+            <!-- Enrolled Active Courses -->
+            <div class="mockup-courses-title">Active Courses & Timetable</div>
+            
+            <div class="course-item">
+              <div class="course-left">
+                <div class="course-icon-badge badge-cs">CS</div>
+                <div>
+                  <div class="course-name">CS 401 · Advanced Algorithms</div>
+                  <div class="course-meta">Mon & Wed · 10:00 AM · Hall B-12</div>
+                </div>
+              </div>
+              <span class="course-status-pill status-active">In Session</span>
+            </div>
+
+            <div class="course-item">
+              <div class="course-left">
+                <div class="course-icon-badge badge-bio">DS</div>
+                <div>
+                  <div class="course-name">DS 302 · Database Systems & Cloud</div>
+                  <div class="course-meta">Tue & Thu · 02:30 PM · Lab 4</div>
+                </div>
+              </div>
+              <span class="course-status-pill status-syncing">Ready</span>
+            </div>
+
+            <div class="course-item">
+              <div class="course-left">
+                <div class="course-icon-badge badge-eng">AI</div>
+                <div>
+                  <div class="course-name">AI 510 · Machine Learning Foundations</div>
+                  <div class="course-meta">Friday · 09:00 AM · Auditorium</div>
+                </div>
+              </div>
+              <span class="course-status-pill status-active">Active</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       3. Content Section 1: Platform Features Grid
+       ====================================================================== -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="pill-badge">Platform Capabilities</div>
+        <h2 class="section-title">Everything modern educators need in one workspace</h2>
+        <p class="section-subtitle">
+          Designed with professors, registrars, and students in mind. OSIS replaces chaotic paperwork with automated digital precision.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        
+        <!-- Feature 1 -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper icon-blue">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Automated Grading & Transcripts</h3>
+          <p class="feature-text">
+            Compute weighted GPAs, grade curves, and class percentiles automatically. Generate tamper-proof digital transcripts with cryptographic verification signatures.
+          </p>
+          <a href="#about" class="feature-link">
+            <span>Learn how grading works</span> &rarr;
+          </a>
+        </article>
+
+        <!-- Feature 2 -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper icon-emerald">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Real-Time Attendance & RFID Sync</h3>
+          <p class="feature-text">
+            One-tap faculty roll call, mobile geofenced check-ins, or hardware RFID card scans. Parents and academic advisors receive instant alerts for unexcused absences.
+          </p>
+          <a href="#about" class="feature-link">
+            <span>Explore attendance sync</span> &rarr;
+          </a>
+        </article>
+
+        <!-- Feature 3 -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper icon-violet">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="feature-title">Conflict-Free Course Scheduling</h3>
+          <p class="feature-text">
+            Smart algorithmic timetable builder prevents classroom and faculty double-booking. Includes prerequisite validation rules and automated waitlist queues.
+          </p>
+          <a href="#about" class="feature-link">
+            <span>View scheduling engine</span> &rarr;
+          </a>
+        </article>
+
+        <!-- Feature 4 -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper icon-amber">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Encrypted Student Records Vault</h3>
+          <p class="feature-text">
+            Strict role-based permissions safeguard sensitive medical, demographic, and academic histories. Fully compliant with FERPA, GDPR, and higher education privacy mandates.
+          </p>
+          <a href="#about" class="feature-link">
+            <span>Discover security standards</span> &rarr;
+          </a>
+        </article>
+
+        <!-- Feature 5 -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper icon-cyan">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="feature-title">Tuition & Financial Management</h3>
+          <p class="feature-text">
+            Automate semester fee invoicing, scholarship credits, installment plans, and online tuition payments with automated receipts and ledger reconciliation.
+          </p>
+          <a href="#about" class="feature-link">
+            <span>Read billing overview</span> &rarr;
+          </a>
+        </article>
+
+        <!-- Feature 6 -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper icon-rose">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+          </div>
+          <h3 class="feature-title">Multi-Device Mobile Experience</h3>
+          <p class="feature-text">
+            Students and faculty stay connected anywhere. Native push notifications for exam dates, campus announcements, fee deadlines, and direct teacher office hours.
+          </p>
+          <a href="#about" class="feature-link">
+            <span>Explore portal access</span> &rarr;
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       4. Content Section 2: How It Works & About OSIS
+       ====================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="pill-badge">How It Works</div>
+        <h2 class="section-title">Deployment in days, not academic semesters</h2>
+        <p class="section-subtitle">
+          Transitioning to OSIS is smooth and painless. Our 4-step framework brings your entire campus online with zero data loss.
+        </p>
+      </div>
+
+      <div class="workflow-grid">
+        
+        <div class="workflow-card">
+          <span class="step-num-pill">STEP 01</span>
+          <h3 class="workflow-title">Import Existing Roster</h3>
+          <p class="workflow-text">
+            Upload current student archives, course catalogs, and faculty directories via one-click CSV migration or legacy database connectors.
+          </p>
+        </div>
+
+        <div class="workflow-card">
+          <span class="step-num-pill">STEP 02</span>
+          <h3 class="workflow-title">Configure Rules & Terms</h3>
+          <p class="workflow-text">
+            Define degree credit requirements, grade scales, attendance absence limits, and departmental approval chains with intuitive toggles.
+          </p>
+        </div>
+
+        <div class="workflow-card">
+          <span class="step-num-pill">STEP 03</span>
+          <h3 class="workflow-title">Role-Based Access</h3>
+          <p class="workflow-text">
+            Dispatch personalized invitations for students, professors, department heads, and accountants with tailored clearance levels.
+          </p>
+        </div>
+
+        <div class="workflow-card">
+          <span class="step-num-pill">STEP 04</span>
+          <h3 class="workflow-title">Accelerate Your Campus</h3>
+          <p class="workflow-text">
+            Enjoy instant semester audits, real-time analytics dashboards, zero registration bottlenecks, and delighted faculty members.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- About Split Showcase -->
+      <div class="about-split">
+        <div class="about-content">
+          <div class="pill-badge">Why OSIS Outperforms Legacy Systems</div>
+          <h3>Built specifically for academic peace of mind</h3>
+          <p>
+            Unlike generic ERP software adapted for schools, OSIS is designed from the ground up around real campus schedules, prerequisite paths, and transcript regulations.
+          </p>
+
+          <ul class="about-checklist">
+            <li class="about-check-item">
+              <span class="check-icon">&#10003;</span>
+              <span>10x faster semester course registration with zero server crashes</span>
+            </li>
+            <li class="about-check-item">
+              <span class="check-icon">&#10003;</span>
+              <span>100% paperless transcript requests and electronic signature approval</span>
+            </li>
+            <li class="about-check-item">
+              <span class="check-icon">&#10003;</span>
+              <span>Bank-level 256-bit AES encryption protecting student identity records</span>
+            </li>
+            <li class="about-check-item">
+              <span class="check-icon">&#10003;</span>
+              <span>Dedicated 24/7 technical support and seamless system backups</span>
+            </li>
+          </ul>
+
+          <a href="register.html" class="btn btn-primary">Start Your Institution's Trial</a>
+        </div>
+
+        <div class="about-visual-box">
+          <div class="pill-badge pill-badge-dark">Campus Impact Highlights</div>
+          <h4 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.3;">
+            Measurable efficiency across every academic department
+          </h4>
+
+          <div class="stat-callout">
+            <div class="stat-callout-item">
+              <div class="stat-callout-num">85%</div>
+              <div class="stat-callout-label">Reduction in manual registrar paperwork</div>
+            </div>
+            <div class="stat-callout-item">
+              <div class="stat-callout-num">4.2 hrs</div>
+              <div class="stat-callout-label">Saved per professor every grading week</div>
+            </div>
+            <div class="stat-callout-item">
+              <div class="stat-callout-num">99.9%</div>
+              <div class="stat-callout-label">Timetable conflict elimination rate</div>
+            </div>
+            <div class="stat-callout-item">
+              <div class="stat-callout-num">0 Sec</div>
+              <div class="stat-callout-label">Downtime during heavy enrollment peaks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       5. Metric & Impact Banner
+       ====================================================================== -->
+  <section class="stats-banner" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Institutions Transformed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1.2M+</div>
+          <div class="stat-label">Active Student Records</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">99.98%</div>
+          <div class="stat-label">Verified Platform Uptime</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4.9 / 5</div>
+          <div class="stat-label">Student Satisfaction Score</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. Testimonials Section (Content Section 3)
+       ====================================================================== -->
+  <section class="section section-alt" id="testimonials">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="pill-badge">Voices of Success</div>
+        <h2 class="section-title">Trusted by educators, loved by students</h2>
+        <p class="section-subtitle">
+          Discover how academic leaders and faculty members achieved peace of mind with OSIS.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Course enrollment used to be the most stressful two weeks of the semester. With OSIS, 4,500 students enrolled without a single server lag or double-booking error. It completely transformed our registrar operations."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar author-avatar-1">EV</div>
+            <div>
+              <div class="author-name">Dr. Eleanor Vance</div>
+              <div class="author-role">Dean of Academic Affairs, Sterling University</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "The automatic transcript verification and real-time attendance alerts cut down our office queries by 70%. Faculty adore how effortless it is to submit midterm marks, and audit season is no longer daunting."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar author-avatar-2">MT</div>
+            <div>
+              <div class="author-name">Marcus Thorne</div>
+              <div class="author-role">Registrar Director, Apex Institute of Technology</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "As a student, having my GPA breakdown, upcoming assignments, and lecture room schedule in one clean mobile portal is fantastic. It's the cleanest school software I have ever used."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar author-avatar-3">SL</div>
+            <div>
+              <div class="author-name">Sarah Lin</div>
+              <div class="author-role">President, Student Union Association</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       7. Frequently Asked Questions (FAQ) - Pure HTML5 Accordion
+       ====================================================================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="pill-badge">Got Questions?</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Common queries about onboarding, security compliance, and platform capabilities.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        
+        <details class="faq-item" open>
+          <summary class="faq-summary">
+            <span>How secure is student data hosted on OSIS?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-content">
+            OSIS enforces AES-256 bit database encryption at rest and TLS 1.3 in transit. Our infrastructure conforms strictly to FERPA (Family Educational Rights and Privacy Act) and GDPR guidelines, ensuring student grades and personal details remain confidential.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>Can OSIS integrate with our existing Learning Management System (LMS)?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-content">
+            Yes. OSIS provides bi-directional LTI 1.3 connectors for Canvas, Moodle, Blackboard, and Google Classroom to sync rosters, assignments, and grades automatically without double entry.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>How long does campus onboarding take?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-content">
+            Standard institutions complete full migration in 3 to 7 business days. Our automated CSV roster mapping handles student records, faculty rosters, and past grade transcripts smoothly.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>Does OSIS work well on mobile phones and tablets?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-content">
+            Absolutely. Every screen is built with responsive HTML5 and CSS3 layout principles (Flexbox and Grid). Faculty can take roll call from tablets, and students can view GPAs and timetable schedules seamlessly from any smartphone.
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       8. Pre-Footer Call to Action Banner
+       ====================================================================== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="pill-badge pill-badge-dark" style="margin-bottom: 1.25rem;">Start Today</div>
+        <h2 class="cta-title">Ready to bring your campus into the digital era?</h2>
+        <p class="cta-subtitle">
+          Join over 500 forward-looking institutions automating records, grading, and campus life with OSIS. No complicated installations required.
+        </p>
+        <div class="cta-actions">
+          <a href="register.html" class="btn btn-white btn-lg">
+            <span>Register Your Campus Free</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="login.html" class="btn btn-outline-white btn-lg">
+            <span>Existing User? Sign In</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       9. Footer Section with Contact & Social Links
+       ====================================================================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="OSIS Home">
+            <div class="brand-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <span>OSIS</span>
+          </a>
+          <p>
+            The intelligent student management and campus operating system engineered for universities, colleges, and high schools worldwide.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Discord">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links: Platform -->
+        <div>
+          <div class="footer-heading">Platform</div>
+          <ul class="footer-links">
+            <li><a href="#features" class="footer-link">Core Features</a></li>
+            <li><a href="#about" class="footer-link">How It Works</a></li>
+            <li><a href="#stats" class="footer-link">Impact Metrics</a></li>
+            <li><a href="#testimonials" class="footer-link">Testimonials</a></li>
+            <li><a href="#faq" class="footer-link">FAQ Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Portals -->
+        <div>
+          <div class="footer-heading">Portals</div>
+          <ul class="footer-links">
+            <li><a href="login.html" class="footer-link">Student Portal</a></li>
+            <li><a href="login.html" class="footer-link">Faculty Hub</a></li>
+            <li><a href="login.html" class="footer-link">Registrar Center</a></li>
+            <li><a href="login.html" class="footer-link">Parent Access</a></li>
+            <li><a href="register.html" class="footer-link">Institution Sign Up</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <div class="footer-heading">Resources</div>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">Documentation</a></li>
+            <li><a href="#about" class="footer-link">API & Webhooks</a></li>
+            <li><a href="#about" class="footer-link">Security Whitepaper</a></li>
+            <li><a href="#about" class="footer-link">FERPA Compliance</a></li>
+            <li><a href="#about" class="footer-link">System Status</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <div class="footer-heading">Contact & Support</div>
+          
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>450 University Ave, Suite 300<br>Palo Alto, CA 94301</span>
+          </div>
+
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <span>support@osis-portal.edu</span>
+          </div>
+
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span>+1 (800) 555-OSIS (6747)</span>
+          </div>
+
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">⏰</span>
+            <span>Mon - Fri · 8am - 8pm EST</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright & Legal Links -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 OSIS Technologies Inc. All rights reserved. Built with HTML5 &amp; CSS3.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#faq">Privacy Policy</a>
+          <a href="#faq">Terms of Service</a>
+          <a href="#faq">Cookie Preferences</a>
+          <a href="#faq">Security Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

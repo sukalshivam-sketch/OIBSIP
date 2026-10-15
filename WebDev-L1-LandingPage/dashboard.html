@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard · OSIS Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .dashboard-layout {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--bg-page);
+    }
+    .dash-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .dash-main {
+      flex: 1;
+      padding: 2.5rem 0;
+    }
+    .dash-welcome-card {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .dash-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+    .dash-box {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .dash-box:last-child {
+      margin-bottom: 0;
+    }
+    .dash-box-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--neutral-900);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @media (max-width: 900px) {
+      .dash-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="dashboard-layout">
+
+  <!-- Header -->
+  <header class="dash-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="OSIS Home">
+        <div class="brand-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <span>OSIS</span>
+        <span class="brand-tag">Portal</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-secondary btn-sm">&larr; Return to Landing Page</a>
+        <button id="logoutBtn" class="btn btn-primary btn-sm">Log Out</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Content -->
+  <main class="dash-main">
+    <div class="container">
+      
+      <!-- Welcome Hero Banner -->
+      <div class="dash-welcome-card">
+        <div>
+          <div class="pill-badge pill-badge-dark" style="margin-bottom: 0.5rem;">Academic Year 2026–2027</div>
+          <h2 style="font-size: 1.85rem; font-weight: 800; margin-bottom: 0.25rem;">
+            Welcome back, <span id="userNameDisplay">Scholar</span>!
+          </h2>
+          <p style="color: var(--primary-200); font-size: 0.95rem;">
+            Department of Science &amp; Technology · Student ID: #OSIS-94821
+          </p>
+        </div>
+        <div>
+          <span class="mockup-term-badge" style="background-color: rgba(255, 255, 255, 0.15); color: #ffffff; padding: 0.5rem 1rem; font-size: 0.875rem;">
+            ● All Records Synchronized
+          </span>
+        </div>
+      </div>
+
+      <!-- Quick KPI Counters -->
+      <div class="mockup-kpi-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 2rem;">
+        <div class="kpi-card" style="padding: 1.25rem; background: #ffffff;">
+          <div class="kpi-label">Current Cumulative GPA</div>
+          <div class="kpi-val" style="font-size: 1.6rem; color: var(--primary-600);">3.88 / 4.0</div>
+          <div class="kpi-diff">▲ Top 5% in Faculty</div>
+        </div>
+        <div class="kpi-card" style="padding: 1.25rem; background: #ffffff;">
+          <div class="kpi-label">Lecture Attendance</div>
+          <div class="kpi-val" style="font-size: 1.6rem; color: var(--accent-emerald);">96.8%</div>
+          <div class="kpi-diff">Compliant with exam quota</div>
+        </div>
+        <div class="kpi-card" style="padding: 1.25rem; background: #ffffff;">
+          <div class="kpi-label">Completed Credits</div>
+          <div class="kpi-val" style="font-size: 1.6rem;">84 / 120</div>
+          <div class="kpi-diff">Junior Year on Track</div>
+        </div>
+        <div class="kpi-card" style="padding: 1.25rem; background: #ffffff;">
+          <div class="kpi-label">Pending Tuition Due</div>
+          <div class="kpi-val" style="font-size: 1.6rem; color: var(--neutral-700);">$0.00</div>
+          <div class="kpi-diff" style="color: var(--accent-emerald);">Fully Settled</div>
+        </div>
+      </div>
+
+      <!-- Main Columns -->
+      <div class="dash-grid">
+        
+        <!-- Left: Current Enrolled Classes -->
+        <div>
+          <div class="dash-box">
+            <div class="dash-box-title">
+              <span>Enrolled Courses (Fall Term)</span>
+              <span style="font-size: 0.85rem; color: var(--primary-600); font-weight: 600;">5 Courses Active</span>
+            </div>
+
+            <div class="course-item">
+              <div class="course-left">
+                <div class="course-icon-badge badge-cs">CS</div>
+                <div>
+                  <div class="course-name">CS 401 · Advanced Algorithms & Complexity</div>
+                  <div class="course-meta">Prof. Mitchell · Mon, Wed · 10:00 AM – 11:30 AM · Hall B-12</div>
+                </div>
+              </div>
+              <span class="course-status-pill status-active">Enrolled (4 Cr)</span>
+            </div>
+
+            <div class="course-item">
+              <div class="course-left">
+                <div class="course-icon-badge badge-bio">DS</div>
+                <div>
+                  <div class="course-name">DS 302 · Distributed Databases & Cloud Architecture</div>
+                  <div class="course-meta">Dr. Vance · Tue, Thu · 02:30 PM – 04:00 PM · Lab 4</div>
+                </div>
+              </div>
+              <span class="course-status-pill status-active">Enrolled (4 Cr)</span>
+            </div>
+
+            <div class="course-item">
+              <div class="course-left">
+                <div class="course-icon-badge badge-eng">AI</div>
+                <div>
+                  <div class="course-name">AI 510 · Neural Networks & Deep Learning</div>
+                  <div class="course-meta">Prof. Al-Mansoor · Friday · 09:00 AM – 12:00 PM · Auditorium</div>
+                </div>
+              </div>
+              <span class="course-status-pill status-active">Enrolled (3 Cr)</span>
+            </div>
+
+            <div class="course-item">
+              <div class="course-left">
+                <div class="course-icon-badge badge-cs">SE</div>
+                <div>
+                  <div class="course-name">SE 330 · Software Engineering Lifecycle</div>
+                  <div class="course-meta">Dr. Reynolds · Mon, Wed · 01:00 PM – 02:30 PM · Room 204</div>
+                </div>
+              </div>
+              <span class="course-status-pill status-active">Enrolled (3 Cr)</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Campus Notices & Quick Actions -->
+        <div>
+          <div class="dash-box">
+            <div class="dash-box-title">
+              <span>Campus Announcements</span>
+            </div>
+            
+            <div style="margin-bottom: 1rem; padding-bottom: 0.85rem; border-bottom: 1px solid var(--border-light);">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--primary-600);">REGISTRAR'S OFFICE</span>
+              <p style="font-size: 0.875rem; font-weight: 600; color: var(--neutral-800); margin: 0.2rem 0;">Fall Semester Midterm Examination Schedule</p>
+              <p style="font-size: 0.775rem; color: var(--neutral-500);">Exam timetable published. Please verify room allocations.</p>
+            </div>
+
+            <div style="margin-bottom: 1rem; padding-bottom: 0.85rem; border-bottom: 1px solid var(--border-light);">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--accent-emerald);">LIBRARY & MEDIA</span>
+              <p style="font-size: 0.875rem; font-weight: 600; color: var(--neutral-800); margin: 0.2rem 0;">24-Hour Study Hall Openings</p>
+              <p style="font-size: 0.775rem; color: var(--neutral-500);">Central library access extended throughout finals period.</p>
+            </div>
+
+            <div>
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--accent-amber);">IT SERVICES</span>
+              <p style="font-size: 0.875rem; font-weight: 600; color: var(--neutral-800); margin: 0.2rem 0;">Wi-Fi 6 Upgrade Completed</p>
+              <p style="font-size: 0.775rem; color: var(--neutral-500);">High-speed authentication is now live across all dorms.</p>
+            </div>
+          </div>
+
+          <div class="dash-box">
+            <div class="dash-box-title">
+              <span>Quick Actions</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <a href="index.html#features" class="btn btn-secondary btn-sm" style="justify-content: flex-start;">📄 Request Official Transcript</a>
+              <a href="index.html#features" class="btn btn-secondary btn-sm" style="justify-content: flex-start;">📅 Export Timetable to Calendar</a>
+              <a href="index.html#contact" class="btn btn-secondary btn-sm" style="justify-content: flex-start;">💬 Contact Department Advisor</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const user = sessionStorage.getItem("loggedInUser");
+    if (user) {
+      document.getElementById("userNameDisplay").textContent = user;
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", function() {
+      sessionStorage.removeItem("loggedInUser");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>
